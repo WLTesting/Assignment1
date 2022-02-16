@@ -1,0 +1,34 @@
+Link: https://hub.docker.com/r/weilinli0909/nginx-official/tags
+
+======================Terminal===================================================
+➜  ~ docker pull nginx 
+Using default tag: latest
+latest: Pulling from library/nginx
+5eb5b503b376: Pull complete 
+1ae07ab881bd: Pull complete 
+78091884b7be: Pull complete 
+091c283c6a66: Pull complete 
+55de5851019b: Pull complete 
+b559bad762be: Pull complete 
+Digest: sha256:2834dc507516af02784808c5f48b7cbe38b8ed5d0f4837f16e78d00deb7e7767
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+➜  ~ docker tag nginx weilinli0909/nginx-official:0.0.1
+➜  ~ docker push weilinli0909/nginx-official:0.0.1
+The push refers to repository [docker.io/weilinli0909/nginx-official]
+762b147902c0: Mounted from library/nginx 
+235e04e3592a: Mounted from library/nginx 
+6173b6fa63db: Mounted from library/nginx 
+9a94c4a55fe4: Mounted from library/nginx 
+9a3a6af98e18: Mounted from library/nginx 
+7d0ebbe3f5d2: Mounted from library/nginx 
+0.0.1: digest: sha256:bb129a712c2431ecce4af8dde831e980373b26368233ef0f3b2bae9e9ec515ee size: 1570
+➜  ~ docker image ls | grep nginx 
+nginx                                latest                                                  c316d5a335a5   3 weeks ago     142MB
+weilinli0909/nginx-official          0.0.1                                                   c316d5a335a5   3 weeks ago     142MB
+➜  ~ docker pull weilinli0909/nginx-official:0.0.1
+0.0.1: Pulling from weilinli0909/nginx-official
+Digest: sha256:bb129a712c2431ecce4af8dde831e980373b26368233ef0f3b2bae9e9ec515ee
+Status: Image is up to date for weilinli0909/nginx-official:0.0.1
+docker.io/weilinli0909/nginx-official:0.0.1
+➜  ~ 
