@@ -1,0 +1,20 @@
+➜  ~ docker run -dit centos
+cad2c51aac5f35c5a02f9d3c87d2f102b66464e7b31482be3227a17169612722
+➜  ~ docker exec -it cad2c51aac5f35c5a02f9d3c87d2f102b66464e7b31482be3227a17169612722 /bin/bash
+[root@cad2c51aac5f /]# vi checkhash.sh
+[root@cad2c51aac5f /]# cat checkhash.sh
+if [ -f "root/.hushlogin" ]
+then
+  echo "File exists, All Good"
+else
+  touch ~/.hushlogin
+  echo "File created"
+fi
+[root@cad2c51aac5f /]# ls -l ~/.hushlogin
+ls: cannot access '/root/.hushlogin': No such file or directory
+[root@cad2c51aac5f /]# bash checkhash.sh
+File created
+[root@cad2c51aac5f /]# ls -l ~/.hushlogin
+-rw-r--r-- 1 root root 0 Feb 16 07:43 /root/.hushlogin
+[root@cad2c51aac5f /]# bash checkhash.sh
+File exists, All Good
