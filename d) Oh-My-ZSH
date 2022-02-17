@@ -1,0 +1,71 @@
+
+➜  ~ brew install maven
+Running `brew update --preinstall`...
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+csview                                   linux-headers@5.16
+==> Updated Formulae
+Updated 71 formulae.
+==> New Casks
+devtoys                                  thinlinc-client
+==> Updated Casks
+Updated 21 casks.
+
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/17.0.2
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:29512989f1
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/maven/manifests/3.8.4
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/maven/blobs/sha256:ff38bb52b932
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Installing dependencies for maven: openjdk
+==> Installing maven dependency: openjdk
+==> Pouring openjdk--17.0.2.monterey.bottle.tar.gz
+🍺  /usr/local/Cellar/openjdk/17.0.2: 639 files, 305.4MB
+==> Installing maven
+==> Pouring maven--3.8.4.monterey.bottle.tar.gz
+🍺  /usr/local/Cellar/maven/3.8.4: 79 files, 10MB
+==> Running `brew cleanup maven`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+➜  ~ vi ~/.zshrc   
+      plugins=(git mvn)
+➜  ~ source ~/.zshrc
+➜  ~ alias | grep mvn        
+mvn=mvn-or-mvnw
+'mvn!'='mvn -f $(git rev-parse --show-toplevel 2>/dev/null || echo ".")/pom.xml'
+mvn-updates='mvn versions:display-dependency-updates'
+mvnag='mvn archetype:generate'
+mvnboot='mvn spring-boot:run'
+mvnc='mvn clean'
+mvncd='mvn clean deploy'
+mvnce='mvn clean eclipse:clean eclipse:eclipse'
+mvnci='mvn clean install'
+mvncie='mvn clean install eclipse:eclipse'
+mvncini='mvn clean initialize'
+mvncist='mvn clean install -DskipTests'
+mvncisto='mvn clean install -DskipTests --offline'
+mvncom='mvn compile'
+mvncp='mvn clean package'
+mvnct='mvn clean test'
+mvncv='mvn clean verify'
+mvncvst='mvn clean verify -DskipTests'
+mvnd='mvn deploy'
+mvndocs='mvn dependency:resolve -Dclassifier=javadoc'
+mvndt='mvn dependency:tree'
+mvne='mvn eclipse:eclipse'
+mvnfmt='mvn fmt:format'
+mvnjetty='mvn jetty:run'
+mvnp='mvn package'
+mvnqdev='mvn quarkus:dev'
+mvns='mvn site'
+mvnsrc='mvn dependency:sources'
+mvnt='mvn test'
+mvntc='mvn tomcat:run'
+mvntc7='mvn tomcat7:run'
+➜  ~ alias | grep mvn | wc -l
+      31
